@@ -8,9 +8,6 @@ class Day extends Component {
     render() {
         const { day, data } = this.props
 
-        console.log(data)
-        console.log(Object.keys(childrenOwner))
-
         return (
             <div className="day">
                 <span>{fullDayName[day]}</span>
@@ -35,9 +32,13 @@ class Day extends Component {
                             {data.map((d, j) => {
                                 return (
                                     <div key={j}>
-                                        {d.presents.indexOf(c) >= 0
-                                            ? shortOwnerName[childrenOwner[c]]
-                                            : ''}
+                                        <span>
+                                            {d.presents.indexOf(c) >= 0
+                                                ? shortOwnerName[
+                                                      childrenOwner[c]
+                                                  ]
+                                                : ''}
+                                        </span>
                                     </div>
                                 )
                             })}
