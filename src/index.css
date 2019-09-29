@@ -1,13 +1,63 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.day > span {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.day__row {
+    display: flex;
+    flex-direction: row;
+}
+
+.day__row.header {
+    border-bottom: 1px solid black;
+    margin-left: 70px;
+}
+
+.day__row > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+.day__row.header > div {
+    width: 40px;
+}
+
+.day__row > div.header {
+    border-right: 1px solid black;
+    width: 60px;
+}
+
+.day__row span {
+    font-size: 12px;
+}
+
+/* INNER */
+
+.day__row:not(.header) > div:not(.header) {
+    width: 40px;
 }
